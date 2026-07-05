@@ -1,0 +1,563 @@
+/* Global Reset & Arabic Typography Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif; 
+    color: #333333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Fixed Sidebar Configuration */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 260px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-left: 1px solid #eaeaea;
+    border-right: none;
+    padding: 40px 20px; 
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-top-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.sidebar-middle-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.brand-logo {
+    width: 100%;
+    
+}
+
+.logo-middle-lines{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #36bd38;
+    width: 100%;
+    word-spacing: px;
+    text-align:center !important;
+}
+.logo-text-lines{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #111111;
+    width: 100%;
+    word-spacing: 2px;
+    text-align: right !important;
+}
+
+.logo-subtext-english {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    direction: ltr;
+    text-align: center; 
+}
+
+.sidebar-logoimg{
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Main Framework Calculation Container */
+.main-content {
+    margin-right: 260px;
+    margin-left: 0;
+    width: calc(100% - 260px);
+    position: relative;
+    z-index: 101 !important; 
+    pointer-events: auto !important;
+}
+
+/* Section 1: Hero Banner */
+.hero-section {
+    height: 70vh;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-family: 'Amiri', serif; 
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section 2: Benefits Lists */
+.section-heading {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+}
+
+.risk-lead-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    color: #555555;
+}
+
+.wellness-list {
+    list-style-type: none;
+    padding-right: 0; 
+    padding-left: 0;
+}
+
+.wellness-list li {
+    position: relative;
+    padding-right: 25px; 
+    padding-left: 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #444444;
+}
+
+.wellness-list li::before {
+    content: "•";
+    position: absolute;
+    right: 0; 
+    left: auto;
+    color: #555555;
+    font-size: 1.4rem;
+    top: -4px;
+}
+
+/* Section 3: Green Callout Row */
+.cta-green-box {
+    background-color: #49b24b;
+    color: #ffffff;
+}
+
+.cta-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.6rem;
+}
+
+.cta-disclaimer {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.95;
+    max-width: 880px;
+}
+
+.btn-get-started {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #000000 !important;
+    background-color: transparent;
+    border: 1.5px solid #000000;
+    border-radius: 0;
+    padding: 12px 35px;
+    transition: all 0.3s ease;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 99999 !important; 
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.btn-get-started:hover {
+    background-color: #000000;
+    color: #ffffff !important;
+}
+
+/* Section 4: Next Events */
+.poll-container{
+    max-width: 600px;
+    background-color: #fbfbfb;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+}
+
+.poll-question{
+    font-family: 'Amiri', serif;
+    font-size: 2.3rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.poll-option{
+    position: relative;
+}
+
+.poll-radio-input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.poll-label{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #444444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.custom-radio{
+    width: 22px;
+    height: 22px;
+    border: 2px solid #b5b5b5;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.poll-radio-input:checked + .poll-label .custom-radio{
+    border-color: #49b24b;
+    background-color: #49b24b;
+}
+
+.poll-radio-input:checked + .poll-label .custom-radio::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.poll-radio-input:checked + .poll-label{
+    color: #000000;
+}
+
+.btn-poll-submit{
+    font-family: 'Cairo', sans-serif;
+    border: 1.5px solid #000000 !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+    border-radius: 0 !important;
+    padding: 8px 40px !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-poll-submit:hover{
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Section 5: Reviews */
+.reviews-header {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #555555;
+}
+
+.review-card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.avatar-purple { background-color: #cb9cdb; }
+.avatar-teal { background-color: #009688; }
+
+.reviewer-name {
+    font-size: 1.15rem;
+    color: #111111;
+}
+
+.review-text {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.review-footer {
+    font-size: 0.9rem;
+    color: #777777;
+}
+
+/* Section 6: Contact */
+.contact-lead-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.contact-form {
+    max-width: 650px;
+}
+
+.form-custom-input {
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 0;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.sm-text {
+    font-size: 0.95rem;
+}
+
+.btn-submit {
+    font-family: 'Cairo', sans-serif;
+    border: 1.5px solid #000000;
+    background-color: transparent;
+    color: #000000;
+    border-radius: 0;
+    padding: 10px 45px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.btn-submit:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #ffffff;
+    font-size: 0.8rem;
+}
+
+
+.chat-popup-header {
+    background-color: #49b24b;
+    color: #ffffff;
+    padding: 16px 20px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.chat-popup-body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.chat-bubble-greeting {
+    background-color: #d1eed2;
+    color: #2b512c;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    max-width: 90%;
+}
+
+.chat-input {
+    background-color: #f7f7f7 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 10px 14px !important;
+    font-size: 0.95rem !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.btn-chat-send {
+    font-family: 'Cairo', sans-serif;
+    border: 1.5px solid #000000 !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+    border-radius: 0 !important;
+    padding: 6px 35px !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.chat-floating-btn {
+    background-color: #49b24b;
+    color: #000000;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    pointer-events: auto !important; 
+    
+}
+
+.btn-active-dark {
+    background-color: #4a4a4a !important;
+    color: #ffffff !important;
+}
+
+/* --- Responsive Layout Switches --- */
+@media (min-width: 768px) {
+    .border-start-md {
+        border-left: 1px solid #eaeaea !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px 25px !important;
+        border-left: none !important;
+        border-bottom: 1px solid #eaeaea !important;
+        z-index: 1000 !important;
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important; 
+        align-items: center !important;
+    }
+    .main-content {
+        margin-right: 0 !important;
+        width: 100% !important;
+        position: relative !important;
+        z-index: 5 !important; 
+        pointer-events: auto !important;
+    }
+
+    .btn-get-started,
+    .btn-poll-submit,
+    .btn-submit,
+    .form-control,
+    .form-check-input{
+        position: relative !important;
+        z-index: 9999 !important;
+        pointer-events: auto !important;
+        touch-action: manipulation !important;
+    }
+
+    .sidebar-top-group{
+        width: auto !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .sidebar-middle-group {
+        width: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        order: 1 !important;
+    }
+
+    .logo-text-lines {
+        font-size: 1.30rem !important;
+        text-align: left !important; 
+        white-space: nowrap !important;
+        word-spacing: 10px !important;
+        margin-top: 0 !important;
+    }
+
+    .sidebar-middle-group br {
+        display: inline !important;
+        content: " " !important;
+        margin-left: 8px !important;  
+        margin-right: 8px !important;
+    }
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .brand-logo{
+        flex-direction: row-reverse !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .sidebar-logoimg{
+        max-width: 75px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .logo-subtext-english{
+        font-size: 0.8rem !important;
+    }
+
+    .logo-text-lines{
+        font-size: 1.25rem !important;
+        width: auto !important;
+        br {
+            display: none; 
+        }
+    }
+}
+
+#mailingList.form-check-input{
+    border: 2px solid #6c757d !important;
+}
+
+@media (max-width: 576px){
+    .poll-question{
+        font-size: 1.8rem;
+    }
+    .poll-container{
+        padding: 30px 15px !;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        text-align: center !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
